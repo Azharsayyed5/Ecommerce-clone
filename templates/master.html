@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>welcome to online store for branded shoes & backpack</title>
+  <meta name="viewport" charset="utf-8" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<style>
+.footer-distributed{
+    height: 100px;
+  background-color:black; 
+  background-image: linear-gradient(to right, grey, white, grey);
+  color: white;
+  font-size: 13px;
+}
+.footer-distributed,a {
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+</style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse" style="background-color: black">
+
+        <div class="container-fluid">
+            <div class="navbar-header">
+
+                <a class="navbar-brand">
+                 <img src="/static/shopify.png" alt="LOGO" width="45px" height="30px">
+                </a>
+            </div>
+
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="{{ url_for( 'home') }}">Home</a></li>
+
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        products <span class="caret">
+                        </span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{{ url_for( 'shoes') }}">Shoes</a></li>
+                        <li><a href="product1.html">Backpack</a></li>
+                    </ul>
+                </li>
+                <li><a href="{{ url_for( 'contact') }}">contact us</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="{{ url_for( 'signup') }}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a data-toggle="modal" data-target="#popUpWindow"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+
+        <div class="modal fade" id="popUpWindow">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h3 class="modal-title">Login Form</h3>
+                    </div>
+                    <script type="text/javascript">
+                        function form_submit() {
+                          document.getElementById("login-form").submit();
+                         }      
+                        </script>
+                    <div class="modal-header">
+                        
+                        <form id='login-form' role="form" action="validate" method="post">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Username" name="uname" />
+                                <input type="text" class="form-control" placeholder="Password" name="pwd" />
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="submit" onclick="form_submit()"  value="login" class="btn btn-primary btn-block">Login</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    {%block content%}
+
+
+    {%endblock%}
+    <footer class="footer-distributed">
+        <div class="text-center">
+
+            <p class="footer-links" style="padding-top: 26px">
+                <a href="home.html">Home</a>
+                ·
+                <a href="#">About</a>
+                ·
+                <a href="#">Faq</a>
+                ·
+                <a href="contact.html">Contact</a>
+            </p>
+
+            <p class="text-center">Company Name &copy; 2015 <a href="#">xyzstore.com</a></p>
+        </div>
+
+    </footer>
+</body>
+</html>

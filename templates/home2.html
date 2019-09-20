@@ -1,0 +1,108 @@
+{% extends "master.html" %} 
+{% block content %}
+<style>
+    body{
+        /*background-image: linear-gradient(to right,rgb(148, 143, 143),black);*/
+        color: rgb(12, 10, 10);
+        font-family: sans-serif;
+        letter-spacing: 1px;
+
+    }
+    .para{
+      text-align: justify;
+
+    }
+</style>
+<div class="container" style="box-shadow:20px 20px 50px 10px #7d7d80;">
+        <div class="row">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel" style="margin-bottom: 15px;">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                          <li data-target="#myCarousel" data-slide-to="1"></li>
+                          <li data-target="#myCarousel" data-slide-to="2"></li>
+                        </ol>
+                    
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                          <div class="item active">
+                            <img src="/static/cor11.jpg" alt="offer1" style="width:100%;">
+                          </div>
+                    
+                          <div class="item">
+                            <img src="static/cor22.jpg" alt="offer2" style="width:100%;">
+                          </div>
+                        
+                          <div class="item">
+                            <img src="static/cor33.jpg" alt="offer3" style="width:100%;">
+                          </div>
+                        </div>
+                    
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                          <span class="glyphicon glyphicon-chevron-left"></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                          <span class="glyphicon glyphicon-chevron-right"></span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </div>
+                    </div>
+          <div class="col-sm-4">
+            <h2 style="color:rgb(53, 52, 52);">About us</h2>
+            <h5>Shopify for everything and everyone</h5>
+            <div class="img-responsive" style="margin-bottom: 10px;">
+                <img src="/static/logo.png" alt="home2" width="330px" height="150px">
+            </div>
+            <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+            <h3>Latest launches</h3>
+            <p>the most highly anticipated products</p>
+            <ul class="nav nav-pills nav-stacked">
+              <li class="active"><a href="#">NIKE AIRMAX SE</a></li>
+              <li><a href="#">ADIDAS Ultra f5</a></li>
+              <li><a href="#">NIKE G-MAX</a></li>
+            </ul>
+            <hr class="hidden-sm hidden-md hidden-lg">
+
+            <hr>
+
+            <img src="/static/gifgif2.gif" alt="gif2" class="sidekick" width="300px">
+             <a href="#" style="padding-left: 35px;">BALENCIAGA LIMITED EDITION!</a>
+             <hr>
+             <img src="/static/gifgif3.gif" alt="gif2" class="sidekick" width="300px">
+             <a href="#" style="padding-left: 100px;">AIRMAX 15</a>
+             <hr>
+             <img src="/static/GIF5.gif" alt="gif2" class="sidekick" width="300px">
+             <a href="#" style="padding-left: 75px; padding-top: 25px;">BALENCIAGA SPEED</a>
+          </div>
+
+          <div class="col-sm-8">
+              
+            <h2 style="color:rgb(53, 52, 52);">Shopify.com</h2>
+            <h5 style="padding-bottom: 15px;">Everything under everyone's reach</h5>
+            <div class="video" style="margin-bottom: 14px;">
+                <video width="700" controls style="box-shadow:20px 20px 50px 7px rgb(110, 109, 109);">
+                    <source src="/static/nikead1.mp4" type="video/mp4">
+                    <source src="/static/nikead1.ogg" type="video/ogg">
+                  </video>
+                  </div>
+            <p style="color:white">Online Fashion Shopping: convenient, fast and affordable!</p>
+            <p class="para">Shopping is fun and exhilarating and more so when you can shop 24x7 without leaving the comfort of home. This in simpler words is what we call Jabong.com! Online shopping at Jabong.com is convenient and affordable. You can find your desired products more quickly and easily using our user-friendly online shopping platform. Fill your cart up to the brim in just a few seconds and get swift home delivery for all orders. 
+              All of this topped with our exclusive offers makes for an exciting, irresistible combo!</p>
+            <br>
+            
+            <h2 style="color: rgb(53, 52, 52)">Customised Section</h2>
+            <h5>Get your shoes and backpack designed yourself</h5>
+            <div class="img-responsive"  style="margin-bottom: 16px">
+                <img src="/static/gifgif.gif" alt="gif1" width=" 450px" height="400px">
+            </div>
+
+            <h4>Paint it and get it delivered</h4>
+            <p>Designed your most anticipated shoes with any material, color, stickers and get it done by yourself onky, we willl deliver it to by in merely 3 days</p>
+          </div>
+        </div>
+      </div>
+      
+      {% endblock %}
+ 
