@@ -3,6 +3,7 @@ from flask import Flask,render_template,request,redirect,url_for
 
 app = Flask(__name__)
 
+app.secret_key = "azharsayyed111"
 
 
 @app.route("/validate", methods=["GET","POST"])
@@ -13,12 +14,22 @@ def validate():
         myconn = conector.connect(host = "localhost",
         user = "root",passwd = "115599",database = "myoffice")
         cur = myconn.cursor()
-        cur.execute=('SELECT * from signup where usern = %s AND password = %s', (username, password))
-        myconn.commit()
-        if (username == usern) and (password == password):
-            return redirect("/home")
+        cur.execute("SELECT usern FROM signup WHERE usern ='"+username+"'")
+        user = cur.fetchone()
+
+        if  len(user) is 1:
+            session["username"] = username
+            print(session)
+            return redirect(url_for("protected"))
         else:
-            return "access denied"
+            return redirect(url_for("signup"))
+        
+@app.route("/checkout", methods=["GET", "POST"])
+def cart():
+    if (request.method=="POST"):
+    prid=request.form["id"]
+    return prid
+    print(prid)
 
 '''@app.route("/validate", methods=["GET","POST"])
 def validate():
